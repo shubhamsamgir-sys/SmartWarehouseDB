@@ -66,3 +66,42 @@ CREATE TABLE purchases (
     FOREIGN KEY (warehouse_id)
         REFERENCES warehouses(warehouse_id)
 );
+
+CREATE TABLE customers (
+    customer_id INT PRIMARY KEY AUTO_INCREMENT,
+
+    customer_name VARCHAR(100) NOT NULL,
+
+    phone VARCHAR(15) UNIQUE,
+
+    email VARCHAR(100) UNIQUE,
+
+    city VARCHAR(100) NOT NULL
+);
+
+
+
+CREATE TABLE sales (
+    sale_id INT PRIMARY KEY AUTO_INCREMENT,
+
+    customer_id INT NOT NULL,
+    product_id INT NOT NULL,
+    warehouse_id INT NOT NULL,
+
+    quantity INT NOT NULL
+        CHECK (quantity > 0),
+
+    sale_price DECIMAL(10,2) NOT NULL
+        CHECK (sale_price > 0),
+
+    sale_date DATE NOT NULL,
+
+    FOREIGN KEY (customer_id)
+        REFERENCES customers(customer_id),
+
+    FOREIGN KEY (product_id)
+        REFERENCES products(product_id),
+
+    FOREIGN KEY (warehouse_id)
+        REFERENCES warehouses(warehouse_id)
+);

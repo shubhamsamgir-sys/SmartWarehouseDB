@@ -33,3 +33,43 @@ VALUES
 ('Siddharth Kulkarni', '9876510013', 'siddharth.k@email.com', 'Nagpur'),
 ('Ishita Roy', '9876510014', 'ishita.roy@email.com', 'Kolkata'),
 ('Manoj Kumar', '9876510015', 'manoj.kumar@email.com', 'Lucknow');
+
+
+INSERT INTO products (supplier_id, product_name, category, unit_price)
+VALUES
+-- Electronics
+(1, 'Business Laptop',  'Electronics', 65000.00),
+(1, '24-inch Monitor',  'Electronics', 12000.00),
+(5, 'Mechanical Keyboard', 'Electronics', 3500.00),
+(5, 'Wireless Mouse', 'Electronics', 1200.00),
+(4, 'Laser Printer', 'Electronics', 18000.00),
+(5, 'HD Webcam', 'Electronics', 2500.00),
+
+-- Office Supplies
+(2, 'Notebook Pack', 'Office Supplies', 300.00),
+(2, 'Blue Pen Pack', 'Office Supplies', 150.00),
+(2, 'Magnetic Whiteboard', 'Office Supplies', 4500.00),
+(2, 'Heavy-duty Stapler', 'Office Supplies', 800.00),
+(2, 'File Folder Set', 'Office Supplies', 500.00),
+
+-- Furniture
+(3, 'Office Chair', 'Furniture', 8500.00),
+(3, 'Office Desk', 'Furniture', 12000.00),
+(3, 'Bookshelf', 'Furniture', 7000.00),
+(3, 'Storage Cabinet', 'Furniture', 9500.00),
+
+-- Home Appliances
+(4, 'Refrigerator', 'Home Appliances', 32000.00),
+(4, 'Microwave Oven', 'Home Appliances', 11000.00),
+(4, 'Air Purifier', 'Home Appliances', 14000.00),
+(4, 'Vacuum Cleaner', 'Home Appliances', 9000.00),
+
+-- Computer Accessories
+(5, '1TB SSD', 'Computer Accessories', 6500.00),
+(5, '64GB USB Drive', 'Computer Accessories', 900.00),
+(5, 'Wi-Fi Router', 'Computer Accessories', 2800.00),
+(5, 'UPS Backup', 'Computer Accessories', 5500.00),
+(5, 'External Hard Drive', 'Computer Accessories', 7200.00),
+
+-- Industrial
+(7, 'Barcode Scanner', 'Industrial Equipment', 4500.00);
