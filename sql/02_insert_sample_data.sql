@@ -256,3 +256,38 @@ VALUES
 
 -- Business Laptop (repeat sale)
 (4, 1, 3, 2, 65000.00, '2026-04-06');
+
+
+
+-- ============================================
+-- Populate Inventory Snapshot
+-- Current Stock = Total Purchased - Total Sold
+-- ============================================
+
+INSERT INTO inventory
+(product_id, warehouse_id, current_stock)
+
+SELECT
+    p.product_id,
+    p.warehouse_id,
+    p.total_purchased - COALESCE(s.total_sold, 0) AS current_stock
+FROM
+(
+    SELECT
+        product_id,
+        warehouse_id,
+        SUM(quantity) AS total_purchased
+    FROM purchases
+    GROUP BY product_id, warehouse_id
+) AS p
+LEFT JOIN
+(
+    SELECT
+        product_id,
+        warehouse_id,
+        SUM(quantity) AS total_sold
+    FROM sales
+    GROUP BY product_id, warehouse_id
+) AS s
+ON p.product_id = s.product_id
+AND p.warehouse_id = s.warehouse_id;
