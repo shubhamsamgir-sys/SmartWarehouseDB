@@ -1,0 +1,4 @@
+-- No schema changes were required for SmartWarehouseDB.
+  -- The initial design in 01_create_schema fully met all
+  -- requirements. Kept for structural consistency across
+  -- the LevelUpDB / RiskRadarDB / SmartWarehouseDB project set.
