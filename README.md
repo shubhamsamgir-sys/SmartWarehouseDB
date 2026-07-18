@@ -98,9 +98,15 @@ These decisions were made intentionally to keep the project focused on database 
 
 ---
 
-## SQL files
+## SQL Files
 
 ```text
+- 01_create_schemas.sql
+- 02_insert_sample_data.sql
+- 03_schema_updates.sql
+- 04_analytical_queries.sql
+- 05_indexing_analysis.sql
+
 
 ```
 
