@@ -98,17 +98,10 @@ These decisions were made intentionally to keep the project focused on database 
 
 ---
 
-## Project Structure
+## SQL files
 
 ```text
-SmartWarehouseDB/
-│
-├── 01_create_schema.sql
-├── 02_create_tables.sql
-├── 03_insert_sample_data.sql
-├── 04_analytical_queries.sql
-├── README.md
-└── ER_Diagram.png
+
 ```
 
 ---
